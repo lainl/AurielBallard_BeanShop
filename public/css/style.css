@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'MainFont';
+    src: url('/Fonts/Raleway-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #f8eddd;
+    font-family: 'MainFont', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header, .main-footer {
+    background-color: #f8eddd;
+    padding: 30px 50px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+}
+
+.main-footer {
+    background-color: #D5793C;
+    padding: 20px;
+}
+
+.main-nav, .icons, .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 20px;
+}
+
+.nav-links {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.nav-links a, .social-icons a {
+    color: #783f04;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover, .social-icons a:hover {
+    text-decoration: underline;
+}
+
+.icons {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icons img {
+    height: 40px;
+    cursor: pointer;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.content {
+    padding-bottom: 70px;
+}
+
+.eye-catcher {
+    background-image: url('/images/RetroSqaurePattern.jpg');
+    background-repeat: repeat;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eye-catcher img, .on-sale img, .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.on-sale {
+    width: 20%;
+    padding: 20px 50px;
+    margin: 40px 20px 100px;
+    background-color: transparent;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff8e7;
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.about-content h2, .about-content p {
+    color: #5a3e2b;
+    font-size: 36px;
+    line-height: 1.6;
+}
+
+.image-container {
+    border: 8px solid #ffb74d;
+    padding: 10px;
+    background-color: #fff3cd;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: #fff9e6;
+    padding: 20px;
+}
+
+.product {
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.product img {
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.quantity-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.quantity {
+    width: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: red;
+    font-size: 14px;
+}
+
+.discount-price {
+    color: green;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #768f77;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3e4c3f;
+}
+
+.add-to-cart {
+    margin-top: 10px;
+}
+
+.product-detail-container {
+    align-items: center;
+}

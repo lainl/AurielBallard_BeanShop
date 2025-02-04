@@ -1,0 +1,164 @@
+[
+    {
+        "fileLocation": "images/Product/DessertCheeseCakeBeans.png",
+        "displayName": "Cheese Cake",
+        "category": "Dessert",
+        "description": "The Cheese Cake was crafted in the secret dessert labs, blending Cherry Bean, Vanilla Bean, and a dash of Caramel Bean to achieve a perfect harmony of sweetness and richness.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 2,
+        "price": 9.99
+    },
+    {
+        "fileLocation": "images/Product/DessertChocolateCakeBeans.png",
+        "displayName": "Chocolate Cake",
+        "category": "Dessert",
+        "description": "The Chocolate Cake was crafted in the secret dessert labs, blending Caramel Bean, Mint Bean, and a dash of Vanilla Bean to achieve a perfect harmony of sweetness and richness.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 2,
+        "price": 9.99
+    },
+    {
+        "fileLocation": "images/Product/DessertChocolateChipCookieBeans.png",
+        "displayName": "Chocolate Chip Cookie",
+        "category": "Dessert",
+        "description": "The Chocolate Chip Cookie was crafted in the secret dessert labs, blending Caramel Bean, Mint Bean, and a dash of Cocoa Bean to achieve a perfect harmony of sweetness and richness.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 2,
+        "price": 9.99
+    },
+    {
+        "fileLocation": "images/Product/DessertCinnamonRollBeans.png",
+        "displayName": "Cinnamon Roll",
+        "category": "Dessert",
+        "description": "The Cinnamon Roll was crafted in the secret dessert labs, blending Cocoa Bean, Cherry Bean, and a dash of Caramel Bean to achieve a perfect harmony of sweetness and richness.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 2,
+        "price": 9.99
+    },
+    {
+        "fileLocation": "images/Product/DessertLemonCakeBeans.png",
+        "displayName": "Lemon Cake",
+        "category": "Dessert",
+        "description": "The Lemon Cake was crafted in the secret dessert labs, blending Cocoa Bean, Caramel Bean, and a dash of Cherry Bean to achieve a perfect harmony of sweetness and richness.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 2,
+        "price": 9.99
+    },
+    {
+        "fileLocation": "images/Product/EwCeleryBeans.png",
+        "displayName": "Celery",
+        "category": "Ew",
+        "description": "Only for the daring, Celery is a bizarre concoction brewed in abandoned fermentation chambers. A volatile mix of Garlic Bean, Pickle Bean, and fermented Anchovy Bean gives it an aroma and taste unlike anything you've regretted before.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 1,
+        "price": 1.99
+    },
+    {
+        "fileLocation": "images/Product/EwOysterBeans.png",
+        "displayName": "Oyster",
+        "category": "Ew",
+        "description": "Only for the daring, Oyster is a bizarre concoction brewed in abandoned fermentation chambers. A volatile mix of Seaweed Bean, Garlic Bean, and fermented Pickle Bean gives it an aroma and taste unlike anything you've regretted before.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 1,
+        "price": 1.99
+    },
+    {
+        "fileLocation": "images/Product/EwSurströmmingBeans.png",
+        "displayName": "Surströmming",
+        "category": "Ew",
+        "description": "Only for the daring, Surströmming is a bizarre concoction brewed in abandoned fermentation chambers. A volatile mix of Anchovy Bean, Pickle Bean, and fermented Seaweed Bean gives it an aroma and taste unlike anything you've regretted before.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 1,
+        "price": 1.99
+    },
+    {
+        "fileLocation": "images/Product/FruityBlueberryBeans.png",
+        "displayName": "Blueberry",
+        "category": "Fruity",
+        "description": "Harvested from vibrant tropical groves, Blueberry combines the exotic flavors of Banana Bean, Mango Bean, and sun-ripened Pineapple Bean to create a refreshing fruity explosion.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 2,
+        "price": 4.99
+    },
+    {
+        "fileLocation": "images/Product/FruityDragonFruitBeans.png",
+        "displayName": "Dragon Fruit",
+        "category": "Fruity",
+        "description": "Harvested from vibrant tropical groves, Dragon Fruit combines the exotic flavors of Dragonfruit Bean, Banana Bean, and sun-ripened Mango Bean to create a refreshing fruity explosion.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 2,
+        "price": 4.99
+    },
+    {
+        "fileLocation": "images/Product/FruityMangoBeans.png",
+        "displayName": "Mango",
+        "category": "Fruity",
+        "description": "Harvested from vibrant tropical groves, Mango combines the exotic flavors of Lime Bean, Mango Bean, and sun-ripened Dragonfruit Bean to create a refreshing fruity explosion.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 2,
+        "price": 4.99
+    },
+    {
+        "fileLocation": "images/Product/DessertLemonCakeBeans.png",
+        "displayName": "Pineapple",
+        "category": "Fruity",
+        "description": "Harvested from vibrant tropical groves, Pineapple combines the exotic flavors of Banana Bean, Mango Bean, and sun-ripened Lime Bean to create a refreshing fruity explosion.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 2,
+        "price": 4.99
+    },
+    {
+        "fileLocation": "images/Product/FruityStrawberryBeans.png",
+        "displayName": "Strawberry",
+        "category": "Fruity",
+        "description": "Harvested from vibrant tropical groves, Strawberry combines the exotic flavors of Mango Bean, Dragonfruit Bean, and sun-ripened Lime Bean to create a refreshing fruity explosion.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 2,
+        "price": 4.99
+    },
+    {
+        "fileLocation": "images/Product/SavoryBuffaloWingBeans.png",
+        "displayName": "Buffalo Wing",
+        "category": "Savory",
+        "description": "Developed in underground flavor bunkers, Buffalo Wing melds the boldness of Onion Bean, the savory depth of Tomato Bean, and a hint of Bacon Bean to deliver an umami punch.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 5,
+        "price": 6.99
+    },
+    {
+        "fileLocation": "images/Product/SavoryBurgerBeans.png",
+        "displayName": "Burger",
+        "category": "Savory",
+        "description": "Developed in underground flavor bunkers, Burger melds the boldness of Herb Bean, the savory depth of Bacon Bean, and a hint of Onion Bean to deliver an umami punch.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 5,
+        "price": 6.99
+    },
+    {
+        "fileLocation": "images/Product/SavoryMacAndCheeseBeans.png",
+        "displayName": "Mac And Cheese",
+        "category": "Savory",
+        "description": "Developed in underground flavor bunkers, Mac And Cheese melds the boldness of Onion Bean, the savory depth of Tomato Bean, and a hint of Herb Bean to deliver an umami punch.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 5,
+        "price": 6.99
+    },
+    {
+        "fileLocation": "images/Product/SavoryPizzaBeans.png",
+        "displayName": "Pizza",
+        "category": "Savory",
+        "description": "Developed in underground flavor bunkers, Pizza melds the boldness of Onion Bean, the savory depth of Bacon Bean, and a hint of Tomato Bean to deliver an umami punch.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 5,
+        "price": 6.99
+    },
+    {
+        "fileLocation": "images/Product/SavorySushiRollBeans.png",
+        "displayName": "Sushi Roll",
+        "category": "Savory",
+        "description": "Developed in underground flavor bunkers, Sushi Roll melds the boldness of Bacon Bean, the savory depth of Cheddar Bean, and a hint of Herb Bean to deliver an umami punch.",
+        "expirationDate": "2026-02-04",
+        "expectedDelivery": 5,
+        "price": 6.99
+    }
+]

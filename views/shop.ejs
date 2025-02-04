@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeanShop - Shop</title>
+    <link rel="icon" href="/images/BeanShopLogo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <div class="product-container" id="product-container">
+      
+    </div>
+
+    <button id="save-cart">Save Cart</button>
+
+    <%- include('partials/footer') %>
+
+    <script src="/js/itemPersistence.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const productContainer = document.getElementById('product-container');
+        const saveCartBtn = document.getElementById('save-cart');
+
+        //display products from original file path
+        fetch('/data/product-details.json')
+          .then(res => res.json())
+          .then(products => {
+            products.forEach(product => {
+              const productDiv = document.createElement('div');
+              productDiv.classList.add('product');
+
+              const img = document.createElement('img');
+              img.src = product.fileLocation;
+              img.alt = product.displayName;
+              productDiv.appendChild(img);
+
+              const title = document.createElement('h3');
+              title.textContent = product.displayName;
+              productDiv.appendChild(title);
+
+              const price = document.createElement('p');
+              price.textContent = `$${product.price}`;
+              productDiv.appendChild(price);
+
+              const quantityControl = document.createElement('div');
+              quantityControl.classList.add('quantity-control');
+
+              const minusBtn = document.createElement('button');
+              minusBtn.textContent = '-';
+
+              const quantitySpan = document.createElement('span');
+              quantitySpan.classList.add('quantity');
+              quantitySpan.textContent = getItemQuantity(product.displayName);
+
+              const plusBtn = document.createElement('button');
+              plusBtn.textContent = '+';
+
+              quantityControl.appendChild(minusBtn);
+              quantityControl.appendChild(quantitySpan);
+              quantityControl.appendChild(plusBtn);
+              productDiv.appendChild(quantityControl);
+
+              const cartBtn = document.createElement('button');
+              cartBtn.classList.add('add-to-cart');
+              cartBtn.textContent = getItemQuantity(product.displayName) > 0 ? 'Remove from Cart' : 'Add to Cart';
+              productDiv.appendChild(cartBtn);
+
+              let currentQuantity = getItemQuantity(product.displayName);
+
+              plusBtn.addEventListener('click', () => {
+                currentQuantity++;
+                quantitySpan.textContent = currentQuantity;
+                updateItemQuantity(product.displayName, currentQuantity);
+              });
+
+              minusBtn.addEventListener('click', () => {
+                if (currentQuantity > 0) {
+                  currentQuantity--;
+                  quantitySpan.textContent = currentQuantity;
+                  updateItemQuantity(product.displayName, currentQuantity);
+                }
+              });
+
+              cartBtn.addEventListener('click', () => {
+                if (cartBtn.textContent === 'Add to Cart') {
+                  if (currentQuantity === 0) {
+                    currentQuantity = 1;
+                    quantitySpan.textContent = currentQuantity;
+                  }
+                  addToCart(product.displayName, currentQuantity);
+                  cartBtn.textContent = 'Remove from Cart';
+                } else {
+                  removeFromCart(product.displayName);
+                  cartBtn.textContent = 'Add to Cart';
+                  currentQuantity = 0;
+                  quantitySpan.textContent = '0';
+                }
+              });
+
+              productDiv.style.cursor = 'pointer';
+              productDiv.addEventListener('click', (event) => {
+                if (event.target === cartBtn || event.target === plusBtn || event.target === minusBtn) {
+                  return;
+                }
+                window.location.href = '/product/' + encodeURIComponent(product.displayName);
+              });
+
+              productContainer.appendChild(productDiv);
+            });
+          })
+          .catch(err => console.error('Error fetching product details:', err));
+
+        saveCartBtn.addEventListener('click', () => {
+          fetch('/cart', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(cart),
+          })
+            .then(res => {
+              if (!res.ok) throw new Error('Failed to save cart');
+              return res.text();
+            })
+            .then(responseText => alert('Cart saved successfully!'))
+            .catch(err => alert('Error saving cart.'));
+        });
+      });
+    </script>
+</body>
+</html>

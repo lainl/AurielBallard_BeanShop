@@ -1,0 +1,67 @@
+<header class="main-header">
+    <nav class="main-nav">
+        <!-- Left side navigation -->
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/shop">Shop</a>
+            <a href="/order">Order</a>
+        </div>
+
+        <!-- Title Image -->
+        <div class="logo">
+            <img src="/images/BeanShopTitle.png" alt="BeanShop Title">
+        </div>
+        
+        <!-- Right side icons -->
+        <div class="icons" style="position: relative;"> 
+            <img id="shoppingBagIcon" src="/images/BrownShopBag.png" alt="Shopping Bag">
+            
+            <!-- Added Badge -->
+            <span 
+                id="cart-count" 
+                style="
+                    display: none;          /* Hidden when the cart is empty */
+                    position: absolute; 
+                    bottom: 0; 
+                    right: 0;               /* Adjust as needed */
+                    background-color: black;
+                    color: white;
+                    border-radius: 50%;
+                    width: 18px;
+                    height: 18px;
+                    font-size: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                ">
+                0
+            </span>
+        </div>
+    </nav>
+</header>
+
+<!-- Script to handle cart badge updates -->
+<script>
+  /**
+   * Updates the cart badge based on the number of items in the cart.
+   * Hides the badge if the cart is empty.
+   *
+   * @param {Object} cart - Example: { "Chocolate Cake": 2, "Surströmming": 1 }
+   */
+  function updateCartIconCount(cart) {
+    const cartCountSpan = document.getElementById('cart-count');
+    if (!cartCountSpan) return;
+
+    // Calculate the total number of items in the cart
+    let totalItems = 0;
+    for (const itemName in cart) {
+      totalItems += cart[itemName];
+    }
+
+    // Update badge number
+    cartCountSpan.textContent = totalItems;
+
+    // Show the badge if items exist, otherwise hide it
+    cartCountSpan.style.display = totalItems > 0 ? 'flex' : 'none';
+  }
+</script>

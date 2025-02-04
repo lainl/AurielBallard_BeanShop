@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <div class="product-detail-container">
+    <div class="product-detail">
+      <img src="/<%= product.fileLocation.replace(/^\/?/, '') %>" alt="<%= product.displayName %>" />
+
+      <h2><%= product.displayName %></h2>
+      <p><strong>Category:</strong> <%= product.category %></p>
+      <p><strong>Description:</strong> <%= product.description %></p>
+      <p><strong>Price:</strong> $<%= product.price %></p>
+      <p><strong>Expiration Date:</strong> <%= product.expirationDate %></p>
+      <p><strong>Expected Arrival:</strong> <%= arrivalDate %></p>
+
+      <div class="quantity-control">
+        <button id="minus-btn">-</button>
+        <span id="quantity-span" class="quantity">0</span>
+        <button id="plus-btn">+</button>
+      </div>
+
+      <button id="cart-btn" class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <script src="/js/itemPersistence.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const minusBtn = document.getElementById('minus-btn');
+      const plusBtn = document.getElementById('plus-btn');
+      const quantitySpan = document.getElementById('quantity-span');
+      const cartBtn = document.getElementById('cart-btn');
+      const productName = "<%= product.displayName %>";
+
+      let currentQuantity = getItemQuantity(productName);
+      quantitySpan.textContent = currentQuantity;
+
+      if (currentQuantity > 0) {
+        cartBtn.textContent = 'Remove from Cart';
+      }
+
+      plusBtn.addEventListener('click', () => {
+        currentQuantity++;
+        quantitySpan.textContent = currentQuantity;
+        updateItemQuantity(productName, currentQuantity);
+      });
+
+      minusBtn.addEventListener('click', () => {
+        if (currentQuantity > 0) {
+          currentQuantity--;
+          quantitySpan.textContent = currentQuantity;
+          updateItemQuantity(productName, currentQuantity);
+        }
+      });
+
+      cartBtn.addEventListener('click', () => {
+        if (cartBtn.textContent === 'Add to Cart') {
+          if (currentQuantity === 0) {
+            currentQuantity = 1;
+            quantitySpan.textContent = currentQuantity;
+          }
+          addToCart(productName, currentQuantity);
+          cartBtn.textContent = 'Remove from Cart';
+        } else {
+          removeFromCart(productName);
+          cartBtn.textContent = 'Add to Cart';
+          currentQuantity = 0;
+          quantitySpan.textContent = '0';
+        }
+      });
+    });
+  </script>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

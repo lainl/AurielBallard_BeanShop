@@ -1,0 +1,17 @@
+{
+    "name": "beanshop",
+    "version": "1.0.0",
+    "description": "A simple BeanShop app",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "author": "Your Name",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.8",
+        "express": "^4.21.2",
+        "nodemon": "^3.1.9"
+    }
+}
